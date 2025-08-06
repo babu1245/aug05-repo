@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: baug06imageaks1 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: baug06imageaks1
+  template:
+    metadata:
+      labels:
+        app: baug06imageaks1 
+    spec:
+      containers:
+        - name: baug06imageaks1 
+          image: aug6contregis.azurecr.io/baug06imageaks1
+          ports:
+          - containerPort: 80
